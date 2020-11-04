@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "標楷體";
+      }
+      .container {
+        width: 800px;
+        height: 860px;
+        border: 1px solid #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+      h1 {
+        writing-mode: vertical-lr;
+        font-size: 2.5rem;
+      }
+      td {
+        width: 79px;
+        height: 79px;
+      }
+      .border-LT {
+        border-left: 1px solid #000;
+        border-top: 1px solid #000;
+      }
+      .border-right {
+        border-right: 1px solid #000;
+      }
+      .border-bottom {
+        border-bottom: 1px solid #000;
+      }
+      #middle .h1 {
+        writing-mode: horizontal-tb;
+        display: inline;
+      }
+      #middle .h1r {
+        margin-left: 100px;
+      }
+      #middle .h1l {
+        margin-left: 270px;
+      }
+      table {
+        z-index: -10;
+      }
+      .lineA {
+        position: relative;
+      }
+      .lineB {
+        position: relative;
+      }
+      .lineA::before {
+        content: "";
+        position: absolute;
+        width: 111.73px;
+        height: 1px;
+        background: #000;
+        transform: rotate(45deg);
+        transform-origin: top left;
+        top: 0;
+      }
+      .lineB::before {
+        content: "";
+        position: absolute;
+        width: 111.73px;
+        height: 1px;
+        background: #000;
+        transform: rotate(-45deg);
+        transform-origin: top right;
+        top: 0;
+        left: -34px;
+      }
+      .col {
+        width: 710px;
+        height: 390px;
+      }
+      .top {
+        position: absolute;
+        top: 35px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      .bottom {
+        position: absolute;
+        bottom: 35px;
+        display: flex;
+        flex-wrap: wrap-reverse;
+        justify-content: space-between;
+      }
+      .chess {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        border: 1px solid #000;
+        background: #fff;
+      }
+      .bao-left {
+        margin-left: 80px;
+        margin-top: 85px;
+      }
+      .bao-right {
+        margin-left: 396px;
+        margin-right: 80px;
+        margin-top: 85px;
+      }
+      .c-bottom {
+        margin-bottom: 70px;
+      }
+      .col .h1-chess {
+        margin-top: 15px;
+        margin-left: 10px;
+      }
+      .pao-left {
+        margin-left: 80px;
+        margin-bottom: 85px;
+      }
+      .pao-right {
+        margin-left: 396px;
+        margin-right: 80px;
+        margin-bottom: 85px;
+      }
+      .c-top {
+        margin-top: 70px;
+      }
+      .red {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>棋盤裡，車無輪，馬無韁，叫聲將軍提防提防</h1>
+    <div class="container">
+      <table cellspacing="0" cellpadding="0">
+        <tr>
+          <td class="border-LT"></td>
+          <td class="border-LT"></td>
+          <td class="border-LT"></td>
+          <td class="border-LT lineA"></td>
+          <td class="border-LT lineB"></td>
+          <td class="border-LT"></td>
+          <td class="border-LT"></td>
+          <td class="border-LT border-right"></td>
+        </tr>
+        <tr>
+          <td class="border-LT"></td>
+          <td class="border-LT"></td>
+          <td class="border-LT"></td>
+          <td class="border-LT lineB"></td>
+          <td class="border-LT lineA"></td>
+          <td class="border-LT"></td>
+          <td class="border-LT"></td>
+          <td class="border-LT border-right"></td>
+        </tr>
+        <tr>
+          <td class="border-LT"></td>
+          <td class="border-LT"></td>
+          <td class="border-LT"></td>
+          <td class="border-LT"></td>
+          <td class="border-LT"></td>
+          <td class="border-LT"></td>
+          <td class="border-LT"></td>
+          <td class="border-LT border-right"></td>
+        </tr>
+        <tr>
+          <td class="border-LT"></td>
+          <td class="border-LT"></td>
+          <td class="border-LT"></td>
+          <td class="border-LT"></td>
+          <td class="border-LT"></td>
+          <td class="border-LT"></td>
+          <td class="border-LT"></td>
+          <td class="border-LT border-right"></td>
+        </tr>
+        <tr>
+          <td colspan="8" class="border-LT border-right" id="middle">
+            <h1 class="h1 h1r">楚河</h1>
+            <h1 class="h1 h1l">漢界</h1>
+          </td>
+        </tr>
+        <tr>
+          <td class="border-LT"></td>
+          <td class="border-LT"></td>
+          <td class="border-LT"></td>
+          <td class="border-LT"></td>
+          <td class="border-LT"></td>
+          <td class="border-LT"></td>
+          <td class="border-LT"></td>
+          <td class="border-LT border-right"></td>
+        </tr>
+        <tr>
+          <td class="border-LT"></td>
+          <td class="border-LT"></td>
+          <td class="border-LT"></td>
+          <td class="border-LT"></td>
+          <td class="border-LT"></td>
+          <td class="border-LT"></td>
+          <td class="border-LT"></td>
+          <td class="border-LT border-right"></td>
+        </tr>
+        <tr>
+          <td class="border-LT"></td>
+          <td class="border-LT"></td>
+          <td class="border-LT"></td>
+          <td class="border-LT lineA"></td>
+          <td class="border-LT lineB"></td>
+          <td class="border-LT"></td>
+          <td class="border-LT"></td>
+          <td class="border-LT border-right"></td>
+        </tr>
+        <tr>
+          <td class="border-LT border-bottom"></td>
+          <td class="border-LT border-bottom"></td>
+          <td class="border-LT border-bottom"></td>
+          <td class="border-LT border-bottom lineB"></td>
+          <td class="border-LT border-bottom lineA"></td>
+          <td class="border-LT border-bottom"></td>
+          <td class="border-LT border-bottom"></td>
+          <td class="border-LT border-right border-bottom"></td>
+        </tr>
+      </table>
+      <div class="col top">
+        <div class="chess black"><h1 class="h1-chess">車</h1></div>
+        <div class="chess black"><h1 class="h1-chess">馬</h1></div>
+        <div class="chess black"><h1 class="h1-chess">象</h1></div>
+        <div class="chess black"><h1 class="h1-chess">士</h1></div>
+        <div class="chess black"><h1 class="h1-chess">將</h1></div>
+        <div class="chess black"><h1 class="h1-chess">士</h1></div>
+        <div class="chess black"><h1 class="h1-chess">象</h1></div>
+        <div class="chess black"><h1 class="h1-chess">馬</h1></div>
+        <div class="chess black"><h1 class="h1-chess">車</h1></div>
+        <div class="chess black bao-left"><h1 class="h1-chess">包</h1></div>
+        <div class="chess black bao-right"><h1 class="h1-chess">包</h1></div>
+        <div class="chess black c-bottom"><h1 class="h1-chess">卒</h1></div>
+        <div class="chess black c-bottom"><h1 class="h1-chess">卒</h1></div>
+        <div class="chess black c-bottom"><h1 class="h1-chess">卒</h1></div>
+        <div class="chess black c-bottom"><h1 class="h1-chess">卒</h1></div>
+        <div class="chess black c-bottom"><h1 class="h1-chess">卒</h1></div>
+      </div>
+      <div class="col bottom">
+        <div class="chess red"><h1 class="h1-chess">俥</h1></div>
+        <div class="chess red"><h1 class="h1-chess">傌</h1></div>
+        <div class="chess red"><h1 class="h1-chess">像</h1></div>
+        <div class="chess red"><h1 class="h1-chess">仕</h1></div>
+        <div class="chess red"><h1 class="h1-chess">帥</h1></div>
+        <div class="chess red"><h1 class="h1-chess">仕</h1></div>
+        <div class="chess red"><h1 class="h1-chess">像</h1></div>
+        <div class="chess red"><h1 class="h1-chess">傌</h1></div>
+        <div class="chess red"><h1 class="h1-chess">俥</h1></div>
+        <div class="chess red pao-left"><h1 class="h1-chess">炮</h1></div>
+        <div class="chess red pao-right"><h1 class="h1-chess">炮</h1></div>
+        <div class="chess red c-top"><h1 class="h1-chess">兵</h1></div>
+        <div class="chess red c-top"><h1 class="h1-chess">兵</h1></div>
+        <div class="chess red c-top"><h1 class="h1-chess">兵</h1></div>
+        <div class="chess red c-top"><h1 class="h1-chess">兵</h1></div>
+        <div class="chess red c-top"><h1 class="h1-chess">兵</h1></div>
+      </div>
+    </div>
+    <h1>圖畫裡，龍不吟，虎不嘯，小小書童可笑可笑</h1>
+  </body>
+</html>
